@@ -1,0 +1,24 @@
+.submit-form {
+    position: absolute;
+    bottom: 40px;
+    left: 165px;
+    width: 200px;
+    height: 50px;
+    /* padding: 10px 55px 10px 56px; */
+    
+    font-weight: 700;
+    font-style: 20;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+
+    border: none;
+    border-radius: 4px;
+    box-shadow: $button-shadow;
+
+    color: $light-color;
+    background-color: $accent-color;
+}
+.submit-form:hover,
+.submit-form:focus {
+    background-color: $button-bg-color;
+}

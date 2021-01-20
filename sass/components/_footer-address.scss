@@ -1,0 +1,15 @@
+.address-footer {
+    display: block;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $light-color;
+}
+.address-footer a {
+    display: block;
+    margin-top: 9px;
+    color: rgba(255, 255, 255, 0.6);
+}

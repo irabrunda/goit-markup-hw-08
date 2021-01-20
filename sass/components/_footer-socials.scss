@@ -1,0 +1,52 @@
+/* Соцсети Футер */
+.social-links {
+    display: block;
+    margin-left: 70px;
+}
+.social-links p {
+    margin: 0 0 20px 0;
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $light-color;
+}
+.smm-icons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    & .item + .item {
+        margin-left: 10px;
+    }
+}
+.smm-icons .item {
+    list-style: none;
+}
+.smm-icons .f-link {
+    @extend %centeredFlex;
+    width: 44px;
+    height: 44px;
+    color: $light-color;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    @extend %bgCommon;
+    border-radius: 50%;
+
+    transition: background-color $duration-time $timing-func;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    fill: currentColor;
+}
+/* Соцсети Футер конец */

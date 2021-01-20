@@ -1,0 +1,32 @@
+%centeredFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%bgCommon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+%textTop {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+}
+%sectionTitles {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+%h3Titles {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}

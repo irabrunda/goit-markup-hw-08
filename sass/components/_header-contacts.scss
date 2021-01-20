@@ -1,0 +1,25 @@
+.header .contacts {
+    @extend %centeredFlex;
+    margin-left: 305px;
+}
+.contacts a {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.contacts .item {
+    display: inline-flex;
+    transition: color $duration-time $timing-func;
+    @extend %textTop;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+.contacts .item + .item {
+    margin-left: 30px;
+}
+.contacts-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

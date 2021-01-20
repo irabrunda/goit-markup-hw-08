@@ -1,0 +1,48 @@
+/* Чем мы занимаемся */
+.work {
+    background-color: $primary-background-color;
+    padding-top: 0px;
+}
+.work-h {
+    margin: 0 0 50px 0;
+    text-align: center;
+     @extend %sectionTitles;
+}
+.work-images {
+    display: flex;
+    justify-content: space-between;
+    padding-left:0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & .item + .item {
+        margin-left: 30px;
+    }
+}
+.work-images li {
+    list-style: none;
+    position: relative;
+}
+.work-images .item {
+    display: block;
+    z-index: 2;
+}
+.work-descript {
+    position: absolute;
+    @extend %centeredFlex;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+
+    background: $secondary-background-color;
+    color: $light-color;
+    opacity: 80%;
+}
+.work-descript p {
+    display: block;
+    margin: 0;
+
+    font-style: normal;
+    @extend %h3Titles;
+}
+/* Чем мы занимаемся конец */

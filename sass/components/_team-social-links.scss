@@ -1,0 +1,45 @@
+/* Наша команда соцсети */
+.team-social {
+    @extend %centeredFlex;
+    margin: 0;
+    padding: 0;
+    color: $icon-primary;
+
+    & .link + .link {
+        margin-left: 10px;
+    }
+}
+.team-social .link {
+    list-style: none;
+    display: flex;
+    box-shadow: none;
+}
+.link .social-icon {
+    text-decoration: none;
+    @extend %centeredFlex;
+    padding: 0;
+    border: none;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: $icon-primary;
+    background-color: $primary-background-color;
+    @extend %bgCommon;
+    
+    transition: color $duration-time $timing-func, background-color $duration-time $timing-func;
+
+    &:hover,
+    &:focus {
+        color: $light-color;
+        background-color: $accent-color;
+    }
+}
+.team-social-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    fill: currentColor;
+}
+/* Наша команда соцсети конец */

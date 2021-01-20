@@ -1,0 +1,54 @@
+.site-nav {    
+    @extend %centeredFlex;
+}
+.nav-top {
+    list-style: none;
+    @extend %centeredFlex;
+    margin: 0;
+    padding-left: 0;
+}
+.nav-top .item + .item {
+    margin-left: 50px;
+}
+.nav-top .current {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 28px;
+    color: $accent-color;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        border:none;
+        border-radius: 2px;
+        
+        background-color: $accent-color;
+        transform: scaleX(1);
+        transition: scale $duration-time $timing-func; 
+    }
+}
+.top-link {
+    display: block;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @extend %textTop;
+    transition: color $duration-time $timing-func;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+    
+    &:hover::after,
+    &:focus::after {
+        transform: scale(0.8);
+    }
+}
