@@ -1,13 +1,27 @@
 /* Навигация хедер */
 .header {
-    @extend %centeredFlex;
-
+    position: relative;
     background: $primary-background-color;
     border-bottom: 1px solid $header-border;
+
+    @media screen and (max-width: 767px) {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
 }
-// .header-div {
-//     display: flex;
-// }
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: $desktop) {
+        align-items: center;
+        justify-content: center;
+    }
+  }
+
 .container {
     width: $mob;
 
@@ -24,4 +38,32 @@
         min-width: $desktop;
     }
 }
+.menu-container {
+    text-align: center;
+    font-size: 20px;
+    background-color: $primary-background-color;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+      position: absolute;
+      
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      padding-top: 60px;
+      padding-bottom: 60px;
+  
+      &.is-open {
+        display: block;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
 /* Навигация хедер конец */

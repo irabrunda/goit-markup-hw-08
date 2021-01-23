@@ -1,0 +1,30 @@
+.menu-button {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    color: $primary-text-color;
+    background-color: $primary-background-color;
+    outline: 1px solid $accent-color;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media screen and (min-width: $tab) {
+        display: none;
+    }
+}
+
+.menu-button .icon-cross {
+    display: none;
+}
+.menu-button.is-open .icon-cross {
+    display: block;
+}
+.menu-button.is-open .icon-menu {
+    display: none;
+}

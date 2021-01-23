@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.filters, .checkbox-label, .footer-input::placeholder, .smm-icons .f-link, .clients-img .link-svg, .link .social-icon, .team-social, .work-descript, .feature-icon-div, .hero-div, .header .contacts, .nav-top, .site-nav, .header {
+.filters, .checkbox-label, .footer-input::placeholder, .smm-icons .f-link, .clients-img .link-svg, .link .social-icon, .team-social, .work-descript, .feature-icon-div, .hero-div, .header .contacts, .nav-top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -318,10 +318,62 @@ a {
   padding-bottom: 94px;
 }
 
+.menu-button {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #212121;
+  background-color: #ffffff;
+  outline: 1px solid #2196F3;
+}
+.menu-button:hover, .menu-button:focus {
+  color: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
 /* Навигация хедер */
 .header {
+  position: relative;
   background: #ffffff;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .container {
@@ -342,15 +394,55 @@ a {
   }
 }
 
+.menu-container {
+  text-align: center;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /* Навигация хедер конец */
 .logo-main {
-  margin-right: 93px;
+  display: flex;
+  padding: 15px 0;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .logo-main {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-main {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
 .logo-studio {
@@ -447,7 +539,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .hero-bg {
-    background-image: linear-gradient to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), url(.././images/hero/heromobile.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.././images/hero/heromobile.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
