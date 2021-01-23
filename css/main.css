@@ -319,8 +319,7 @@ a {
 }
 
 .menu-button {
-  width: 40px;
-  height: 40px;
+  display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
