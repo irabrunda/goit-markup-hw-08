@@ -5,14 +5,23 @@
     background: $primary-background-color;
     border-bottom: 1px solid $header-border;
 }
-.header-div {
-    display: flex;
-}
+// .header-div {
+//     display: flex;
+// }
 .container {
+    width: $mob;
+
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;
+
+    @media screen and (min-width: $tab) {
+        min-width: $tab;
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: $desktop;
+    }
 }
 /* Навигация хедер конец */
