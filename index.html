@@ -14,24 +14,42 @@
         <div class="header-div container">
             <nav class="site-nav">
                 <a class="logo-main" href="./index.html">Web<span class="logo-studio">Studio</span></a>
-                <ul class="nav-top">
-                    <li class="item"><a class="top-link current" href="./index.html">Студия</a></li>
-                    <li class="item"><a class="top-link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="item"><a class="top-link" href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <address class="contacts">
-                <a class="item" href="mailto:info@devstudio.com">
-                    <svg class="contacts-icon mail" width="16" height="12">
-                        <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                <button
+                    type="button"
+                    class="menu-button"
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-button
+                >
+                    <svg
+                    width="40"
+                    height="40"
+                    aria-label="Переключатель мобильного меню"
+                    >
+                    <use class="icon-cross" href="./images/icons/cross.svg"></use>
+                    <use class="icon-menu" href="./images/icons/menu.svg"></use>
                     </svg>
-                    info@devstudio.com</a>
-                <a class="item" href="tel:+380961111111">
-                    <svg class="contacts-icon tel" width="10" height="16">
-                        <use href="./images/icons/sprite.svg#icon-tel"></use>
-                    </svg>
-                    +38 096 111 11 11</a>
-            </address>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <ul class="nav-top">
+                        <li class="item"><a class="top-link current" href="./index.html">Студия</a></li>
+                        <li class="item"><a class="top-link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="item"><a class="top-link" href="#">Контакты</a></li>
+                    </ul>
+                    <address class="contacts">
+                        <a class="item" href="mailto:info@devstudio.com">
+                            <svg class="contacts-icon mail" width="16" height="12">
+                                <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com</a>
+                        <a class="item" href="tel:+380961111111">
+                            <svg class="contacts-icon tel" width="10" height="16">
+                                <use href="./images/icons/sprite.svg#icon-tel"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </address>
+                </div>                
+            </nav>            
         </div>
     </header>
     <main class="main">
@@ -190,7 +208,14 @@
                 <h2 class="team-h">Наша команда</h2>
                 <ul class="team-members">
                     <li class="item">
-                        <img src="./images/demyanenko.jpg" alt="Игорь Демьяненко" width="270">
+                        <!-- <img src="./images/demyanenko.jpg" alt="Игорь Демьяненко" width="270"> -->
+                        <picture>
+                            <source srcset="./images/team/demyanenko-desk.jpg 1x, ./images/team/demyanenko-desk@2x.jpg 2x, ./images/team/demyanenko-desk@3x.jpg 3x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/team/demyanenko-tab.jpg 1x, ./images/team/demyanenko-tab@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/team/demyanenko-mob.jpg 1x, ./images/team/demyanenko-mob@2x.jpg 2x" media="(max-width: 767px)"/>
+                          
+                            <img src="./images/team/demyanenko-desk.jpg" alt="Игорь Демьяненко"/>
+                        </picture>
                         <div class="team-container">
                             <h3>Игорь Демьяненко</h3>
                             <p>Product Designer</p>
@@ -227,7 +252,14 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img src="./images/repina.jpg" alt="Ольга Репина" width="270">
+                        <!-- <img src="./images/repina.jpg" alt="Ольга Репина" width="270"> -->
+                        <picture>
+                            <source srcset="./images/team/repina-desk.jpg 1x, ./images/team/repina-desk@2x.jpg 2x, ./images/team/repina-desk@3x.jpg 3x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/team/repina-tab.jpg 1x, ./images/team/repina-tab@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/team/repina-mob.jpg 1x, ./images/team/repina-mob@2x.jpg 2x" media="(max-width: 767px)"/>
+                          
+                            <img src="./images/team/repina-desk.jpg" alt="Ольга Репина"/>
+                        </picture>
                         <div class="team-container">
                             <h3>Ольга Репина</h3>
                             <p>Frontend Developer</p>
@@ -264,7 +296,14 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img src="./images/tarasov.jpg" alt="Николай Тарасов" width="270">
+                        <!-- <img src="./images/tarasov.jpg" alt="Николай Тарасов" width="270"> -->
+                        <picture>
+                            <source srcset="./images/team/tarasov-desk.jpg 1x, ./images/team/tarasov-desk@2x.jpg 2x, ./images/team/tarasov-desk@3x.jpg 3x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/team/tarasov-tab.jpg 1x, ./images/team/tarasov-tab@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/team/tarasov-mob.jpg 1x, ./images/team/tarasov-mob@2x.jpg 2x" media="(max-width: 767px)"/>
+                          
+                            <img src="./images/team/tarasov-desk.jpg" alt="Николай Тарасов"/>
+                        </picture>
                         <div class="team-container">
                             <h3>Николай Тарасов</h3>
                             <p>Marketing</p>
@@ -301,7 +340,14 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img src="./images/yermakov.jpg" alt="Михаил Ермаков" width="270">
+                        <!-- <img src="./images/yermakov.jpg" alt="Михаил Ермаков" width="270"> -->
+                        <picture>
+                            <source srcset="./images/team/yermakov-desk.jpg 1x, ./images/team/yermakov-desk@2x.jpg 2x, ./images/team/yermakov-desk@3x.jpg 3x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/team/yermakov-tab.jpg 1x, ./images/team/yermakov-tab@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/team/yermakov-mob.jpg 1x, ./images/team/yermakov-mob@2x.jpg 2x" media="(max-width: 767px)"/>
+                          
+                            <img src="./images/team/yermakov-desk.jpg" alt="Михаил Ермаков"/>
+                        </picture>                        
                         <div class="team-container">
                             <h3>Михаил Ермаков</h3>
                             <p>UI Designer</p>
@@ -450,22 +496,6 @@
         </div>
     </footer>
     <script src="./js/modal.js"></script>
-<!-- 
-    <script>
-        (() => {
-          document
-            .querySelector('.modal-form')
-            .addEventListener('submit', e => {
-              e.preventDefault();
-
-              new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`),
-              );
-
-              e.currentTarget.reset();
-            });  
-        })();
-    </script>
--->
+    <script src="./js/menu.js"></script>    
 </body>
 </html>
