@@ -1,8 +1,21 @@
 .nav-top {
     list-style: none;
-    @extend %centeredFlex;
-    margin: 0;
-    padding-left: 0;
+    display: block;
+    margin-bottom: 60px;
+    // @extend %centeredFlex;
+
+    @media screen and (min-width: $tab) {
+        display: flex;
+        margin-bottom: 0;
+        margin-left: 85px;
+        margin-right: 84px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-right: 300px;
+        margin-left: auto;
+    }
 }
 .nav-top .item + .item {
     margin-left: 50px;
