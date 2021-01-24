@@ -20,7 +20,7 @@
   color: #757575;
 }
 
-.clients-h, .work-h {
+.work-h {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -760,6 +760,7 @@ ul {
 .team .team-h {
   margin: 0;
   text-align: center;
+  font-weight: 700;
   font-size: 28px;
   line-height: 1.2;
 }
@@ -848,35 +849,33 @@ ul {
 /* Наша команда соцсети конец */
 /* Постоянные клиенты */
 .clients {
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #ffffff;
 }
-
-.clients-h {
-  margin: 0 0 50px 0;
+.clients .clients-h {
+  margin: 0 0 30px 0;
   text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
   color: #212121;
 }
 
 .clients-img {
   display: flex;
-  justify-content: space-between;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  flex-wrap: wrap;
+  margin: -15px;
 }
-.clients-img .item + .item {
-  margin-left: 30px;
-}
-
 .clients-img .item {
-  list-style: none;
-  display: flex;
+  width: calc((100% - 2*30px)/2);
+  height: 90px;
+  margin: 15px;
 }
-
 .clients-img .link-svg {
   text-decoration: none;
-  width: 168px;
-  height: 88px;
+  height: 100%;
   text-align: center;
   color: #AFB1B8;
   background-color: #ffffff;
@@ -888,8 +887,7 @@ ul {
   color: #2196F3;
   border-color: #2196F3;
 }
-
-.client-logo {
+.clients-img .client-logo {
   fill: currentColor;
 }
 
