@@ -1,11 +1,51 @@
 /* Футер */
 .footer {
+    padding: 60px 0;    
     background: $secondary-background-color;
-    padding-top: 60px;
-    padding-bottom: 60px;
+
+    & .logo-footer {
+        text-decoration: none;
+    
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        
+        font-family: $logo-font;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+        color: $accent-color;
+    }
+    & .studio-footer {
+        color: $light-color;
+    }
 }
-.footer-div {
-    display: flex;
-    align-items: baseline;
+
+.address-footer {
+    display: block;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $light-color;
+
+    & a {
+        display: block;
+        margin-top: 9px;
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
+
+
+
+
+
+// .footer-div {
+//     display: flex;
+//     align-items: baseline;
+// }
 /* Футер конец */ 
