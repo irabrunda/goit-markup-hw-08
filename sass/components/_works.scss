@@ -2,6 +2,10 @@
 .work {
     background-color: $primary-background-color;
     padding-top: 0px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 .work-h {
     margin: 0 0 50px 0;
