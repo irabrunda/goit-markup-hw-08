@@ -7,72 +7,82 @@
 
     list-style: none;
     text-align: left;
+
+    & img {
+        display: block;
+    }
+
+    & h3 {
+        margin-top: 0;
+        margin-bottom: 4px;
+    
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $primary-text-color;
+    }
+    & p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+        color: $secondary-text-color;
+    }
 }
 .products .item {
-    display: flex;
+    display: inline-block;
+    max-width: 100%;
+    height: 404px;
     margin-bottom: 30px;
-    margin-right: 30px;
-    max-width: auto;
-    background: $light-color;
+
+    background: $primary-background-color;
+        
+    @media screen and (min-width: $tab) {
+        max-width: calc((100% - 2*30px)/2);
+        margin: 15px;
+    }
+    @media screen and (min-width: $tab) and (max-width: 1199px) {
+        &:nth-child(2) {
+        height: 440px;
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        width: 370px;
+    }
 }
-.products .item:nth-child(n+7) {
-    margin-bottom: 0;
-}
-.products .item:nth-child(3n+3) {
-    margin-right: 0;
-} 
-.products .product-link {
+
+.product-link {
     box-shadow: none;
     transition: box-shadow $duration-time $timing-func;
+    
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    
+    & .product-card {
+        box-sizing: border-box;
+        display: block;
+    
+        padding-top: 20px;
+        padding-right: 24px;
+        padding-bottom: 20px;
+        padding-left: 24px;
+        border: 1px solid $product-card-border;
+    }
 }
-.products .product-link:hover,
-.products .product-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.products img {
-    display: block;
-}
-.products .product-card {
-    box-sizing: border-box;
-    display: block;
 
-    padding-top: 20px;
-    padding-right: 24px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-    border: 1px solid $product-card-border;
-}
-.products h3 {
-    margin-top: 0;
-    margin-bottom: 4px;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: $primary-text-color;
-}
-.products p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-    color: $secondary-text-color;
-}
-.product-link:hover .product-overlay,
-.product-link:focus .product-overlay {
-    transform: translateY(0);
-    opacity: 1;
-}
-.product-thumb:hover::before,
-.product-thumb:focus::before {
-    opacity: 1;
-}
 .product-thumb {
     position: relative;
     overflow: hidden;
+
+    &:hover::before,
+    &:focus::before {
+        opacity: 1;
 }
+
 .product-overlay {
     position: absolute;
     bottom: 0;
@@ -84,13 +94,20 @@
     background-color: $accent-color;
     transform: translateY(100%);
     transition: transform $duration-time $timing-func;
-}
-.product-overlay p {
-    display: flex;
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    color: $light-color;
+    & p {
+        display: flex;
+    
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.56;
+        color: $light-color;
+    }
+    .product-link:hover &,
+    .product-link:focus & {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 /* Проекты конец */

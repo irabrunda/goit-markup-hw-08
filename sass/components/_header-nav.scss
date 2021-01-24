@@ -1,8 +1,6 @@
 .nav-top {
-    list-style: none;
     display: block;
     margin-bottom: 60px;
-    // @extend %centeredFlex;
 
     @media screen and (min-width: $tab) {
         display: flex;
@@ -13,25 +11,58 @@
         padding-bottom: 30px;
     }
     @media screen and (min-width: $desktop) {
-        margin-right: 300px;
         margin-left: auto;
+        margin-right: 300px;
     }
 }
-.nav-top .item + .item {
-    margin-left: 50px;
-} 
+.top-link {
+    display: block;
+    justify-content: center;
+    padding-bottom: 8px;
+    @extend %textTop;
+
+    transition: color $duration-time $timing-func;
+
+    @media screen and (min-width: $tab) {
+        padding: 32px 0;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $secondary-text-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+    
+    &:hover::after,
+    &:focus::after {
+        transform: scale(0.8);
+    }
+}
+.nav-top .item:not(:last-child) {
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $tab) {
+        padding-right: 50px;
+        padding-bottom: 0;
+    }
+}
 .nav-top .current {
     position: relative;
-    display: inline-block;
-    padding-bottom: 28px;
     color: $accent-color;
+    // display: inline-block;
+    // padding-bottom: 28px;
 
     &::after {
         position: absolute;
+        content: "";
         left: 0;
         bottom: 0;
     
-        content: "";
         display: block;
         width: 100%;
         height: 4px;
@@ -43,22 +74,54 @@
         transition: scale $duration-time $timing-func; 
     }
 }
-.top-link {
-    display: block;
-    justify-content: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
-    @extend %textTop;
+// Header-Contacts 
+.contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+
+    @media screen and (min-width: $tab) {
+        align-items: baseline;
+        padding: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+    
+.contacts a:not(:last-child) {
+        margin-bottom: 16px;
+    }
+    @media screen and (min-width: $tab) {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+}
+.contacts .item {
+    display: inline-flex;
     transition: color $duration-time $timing-func;
+    @extend %textTop;
 
     &:hover,
     &:focus {
         color: $accent-color;
     }
-    
-    &:hover::after,
-    &:focus::after {
-        transform: scale(0.8);
+
+    @media screen and (min-width: $tab) {
+        font-size: 12px;
     }
+    @media screen and (min-width: $tab) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+.contacts-icon {
+    margin-right: 10px;
+    fill: currentColor;
 }

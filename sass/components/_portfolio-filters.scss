@@ -1,30 +1,38 @@
 /* Фильтры */
 .filters {
-    @extend %centeredFlex;
-    margin: 0 0 50px 0;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 40px;
 
-    & .item + .item {
+    &.item + .item {
         margin-left: 8px;
     }
+
+    @media screen and (min-width: $tab) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 0 50px 0;
+        padding: 0;
+    }
 }
-.filters .item {
-    list-style: none;
+.filter {
     display: inline-block;
-}
-.filters .filter {
-    padding: 6px 22px 6px 22px;
+    padding: 6px 22px;
+    border: none;
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.625;
     letter-spacing: 0.03em;
+
     color: $primary-text-color;
     background-color: $inactive-filter-color;
-    border: none;
     border-radius: 4px;
     box-shadow: none;
-
     transition: color $duration-time $timing-func, background-color $duration-time $timing-func, box-shadow $duration-time $timing-func;
 
     &:hover,
